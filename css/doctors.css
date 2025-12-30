@@ -1,0 +1,622 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #ffffff;
+  padding: 14px 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo img {
+  height: 65px;
+  width: auto;
+}
+
+/* APPOINTMENT BUTTON */
+.appointment-btn {
+  background: #ff5a00;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.appointment-btn:hover {
+  background: #e44e00;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: #142b6f;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0px 20px;
+  position: relative;
+}
+
+/* NAV LINKS DESKTOP */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #ff5a00;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #142b6f;
+    padding: 15px 0;
+    margin-top: 40px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* EXTRA SMALL */
+@media (max-width: 480px) {
+  .appointment-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+/* CONTACT BANNER */
+.contact-banner {
+  max-width: 1200px;
+  margin: 40px auto;
+  height: 320px;
+  background: #162f6b; /* dark blue */
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -40px;
+}
+
+.contact-banner h1 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .contact-banner {
+    height: 220px;
+    margin: 20px;
+    border-radius: 25px;
+  }
+
+  .contact-banner h1 {
+    font-size: 32px;
+  }
+}
+
+
+/* EXTRA SMALL */
+@media (max-width: 480px) {
+  .contact-banner h1 {
+    font-size: 26px;
+  }
+}
+
+
+
+
+
+/* =========================
+   RESET
+========================= */
+
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
+body {
+ 
+  background: white;
+}
+
+/* =========================
+   FULL-WIDTH WHITE SECTION
+========================= */
+.doctors-wrapper {
+  width: 100%;
+  background: white;
+
+  /* TOP & BOTTOM SHADOW (FLOATING EFFECT) */
+  box-shadow:
+    0 -12px 30px rgba(0, 0, 0, 0.08),
+     0  12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   INNER SECTION
+========================= */
+.doctors-section {
+  padding: 90px 20px;
+  background: transparent; /* IMPORTANT */
+}
+
+/* =========================
+   GRID
+========================= */
+.doctors-grid {
+  max-width: 1350px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* =========================
+   CARD
+========================= */
+.doctor-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  /* CARD SHADOW */
+  box-shadow:
+    0 8px 25px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* CARD HOVER */
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,1);
+}
+
+/* =========================
+   IMAGE
+========================= */
+.doctor-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.doctor-card h3 {
+  font-size: 20px;
+  color: #102a71;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.degree {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.speciality {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: auto;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn-book {
+  margin-top: 20px;
+  background: #102a71;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-book:hover {
+  background: #0b1f55;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 1100px) {
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctor-card img {
+    height: 250px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctors-section {
+    padding: 70px 15px;
+  }
+
+  .doctor-card {
+    padding: 16px;
+  }
+
+  .doctor-card img {
+    height: 230px;
+  }
+
+  .doctor-card h3 {
+    font-size: 18px;
+  }
+
+  .degree,
+  .speciality {
+    font-size: 14px;
+  }
+
+  .btn-book {
+    font-size: 15px;
+    padding: 11px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  background: #162f6b;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  padding-top: 60px;
+}
+
+/* TOP GRID */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* HEADINGS */
+.footer-col h4 {
+  font-size: 20px;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* ICON ROW */
+.footer-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.footer-row i {
+  font-size: 22px;
+}
+
+/* QUICK LINKS */
+/* QUICK LINKS */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+/* LINK STYLE */
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+/* ICON */
+.footer-links i {
+  font-size: 14px;
+}
+
+/* HOVER */
+.footer-links a:hover {
+  color: #ff5a00;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .footer-links a {
+    justify-content: center;     /* center on mobile */
+    font-size: 15px;
+  }
+
+  .footer-links li {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .footer-links a {
+    font-size: 14px;
+  }
+}
+
+/* DIVIDER */
+.footer-divider {
+  border-top: 1px solid rgba(255,255,255,0.35);
+  margin: 40px 0 20px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-size: 15px;
+}
+
+/* SOCIAL */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social span {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  color: #162f6b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+/* CONTACT NUMBER BLOCK */
+.contact-number-block {
+  display: flex;
+  align-items: center;   /* 👈 THIS centers icon vertically */
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* PHONE ICON */
+.contact-number-block i {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* TEXT */
+.number-text h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.number-text p {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FLOATING ICON WRAPPER */
+.floating-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 9999;
+}
+
+/* COMMON BUTTON */
+.float-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+/* CALL BUTTON */
+.call-btn {
+  background: #1fd47e;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  background: #25D366;
+}
+
+/* HOVER EFFECT */
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+/* MOBILE SIZE */
+@media (max-width: 600px) {
+  .float-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+}
+.float-btn {
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+  70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+
+
+

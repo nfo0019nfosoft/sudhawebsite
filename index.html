@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sudha Hospital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header-container">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/cropped-Sudha-Hospital-Final-Logo-1-scaled-1-300x103.png"
+                    alt="Sudha Hospital Logo">
+            </div>
+
+            <!-- APPOINTMENT BUTTON -->
+            <a href="contact.html" class="appointment-btn">
+                Book Appointment &nbsp; <i class="fas fa-angle-right"></i>
+
+            </a>
+
+        </div>
+    </header>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- HAMBURGER ICON -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <!-- MENU LINKS -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- JS -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <section class="about-section">
+        <div class="about-container">
+
+            <!-- LEFT IMAGES -->
+            <div class="about-images">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/Untitled-design-5.jpg"
+                    alt="Hospital Care" class="about-img-main">
+
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/Untitled-design-6.jpg"
+                    alt="Medical Team" class="about-img-overlap">
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="about-content">
+                <h2>About Us</h2>
+
+                <p>
+                    At Sudha Hospitals, we believe healthcare is more than just treatment.
+                    it’s about trust, compassion, and excellence. With a team of experienced
+                    doctors, advanced technology, and patient-first values, we’re committed
+                    to your well-being.
+                    From preventive care to complex surgeries, we offer comprehensive services
+                    under one roof. Every patient is treated with dignity, respect, and
+                    personalized attention. Because at Sudha Hospitals, your health is at the
+                    heart of everything we do.
+                </p>
+
+                <ul class="about-list">
+                    <li>State-of-the-art medical facilities and technology</li>
+                    <li>Experienced and compassionate healthcare professionals</li>
+                    <li>Patient-focused approach with personalized treatment plans</li>
+                    <li>24/7 emergency and critical care services available</li>
+                    <li>Commitment to excellence in treatment and recovery</li>
+                </ul>
+            </div>
+
+        </div>
+        <a href="about.html" class="know-more-btn">Know More</a>
+
+    </section>
+
+
+
+
+
+    <section class="stats-section">
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h2 class="counter" data-target="10">0</h2>
+                <p>Years<br>Experience</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 class="counter" data-target="10000">0</h2>
+                <p>Happy<br>Patients</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 class="counter" data-target="10">0</h2>
+                <p>Doctors</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 class="counter" data-target="20">0</h2>
+                <p>Professional<br>Staff</p>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        const counters = document.querySelectorAll(".counter");
+        let duration = 1600; // total animation time (ms)
+        let startTime = null;
+
+        function animateCounters(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+
+            counters.forEach(counter => {
+                const target = +counter.dataset.target;
+                const value = Math.floor(progress * target);
+
+                counter.innerText =
+                    progress === 1
+                        ? target + "+"
+                        : value;
+            });
+
+            if (progress < 1) {
+                requestAnimationFrame(animateCounters);
+            }
+        }
+
+        requestAnimationFrame(animateCounters);
+    </script>
+
+
+
+
+
+    <section class="doctors-title-section">
+        <h2 class="doctors-title">Our Doctors</h2>
+    </section>
+
+    <section class="doctors-section">
+        <div class="doctors-grid">
+<!-- CARD 1 -->
+    <div class="doctor-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/1-1.jpg" alt="">
+      <h3>DR. SUDHIR ADEPU</h3>
+      <p class="degree">MBBS, MS Surgery</p>
+      <p class="speciality">General & Laparoscopic Surgeon</p>
+      <a href="contact.html" class="btn-book"><i class="bi bi-calendar"></i> Book Appointment</a>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="doctor-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/3-1.jpg" alt="">
+      <h3>DR. MAANASA ADEPU</h3>
+      <p class="degree">
+        MBBS, MS OBG, Diploma In Reproductive Medicine,
+        Fellowship In Reproductive Medicine IMA
+      </p>
+      <p class="speciality">
+        Consultant Obstetrician & Gynaecologist, Fertility Specialist
+      </p>
+      <a href="contact.html" class="btn-book"><i class="bi bi-calendar"></i> Book Appointment</a>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="doctor-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/2-1.jpg" alt="">
+      <h3>DR. K. VARUN KRISHNA</h3>
+      <p class="degree">MBBS(OSM), MS(Ortho), JIPMER, DNB(Ortho), MNAMS, FIJR</p>
+      <p class="speciality">Consultant Orthopedic Surgeon, Knee & Joint Replacement Specialist</p>
+      <a href="contact.html" class="btn-book"><i class="bi bi-calendar"></i> Book Appointment</a>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="doctor-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/6.jpg" alt="">
+      <h3>DR. B. HRUDAY KUMAR</h3>
+      <p class="degree">MBBS, MS, MCH Urology</p>
+      <p class="speciality">Urologist And Andrologist</p>
+      <a href="contact.html" class="btn-book"><i class="bi bi-calendar"></i> Book Appointment</a>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="doctor-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/5.jpg" alt="">
+      <h3>DR. A. RAJASHEKAR</h3>
+      <p class="degree">MBBS, MS, MCH</p>
+      <p class="speciality">Paediatric Surgeon</p>
+      <a href="contact.html" class="btn-book"><i class="bi bi-calendar"></i> Book Appointment</a>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="doctor-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/7.jpg" alt="">
+      <h3>DR. SANDEEP PEDDI</h3>
+      <p class="degree">MBBS, MD, DM</p>
+      <p class="speciality">Nephrologist</p>
+      <a href="contact.html" class="btn-book"><i class="bi bi-calendar"></i> Book Appointment</a>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="doctor-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/cropped-cropped-Sudha-Hospital-Final-Logo-1-scaled-1.png" alt="">
+      <h3>DR. SUDARSHAN ADEPU</h3>
+      <p class="degree">MBBS, MD Paediatrics</p>
+      <p class="speciality">Children Specialist</p>
+      <a href="contact.html" class="btn-book"><i class="bi bi-calendar"></i> Book Appointment</a>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="doctor-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/4.jpg" alt="">
+      <h3>DR. PRAVEENA DONTHIREDDY</h3>
+      <p class="degree">MBBS, DTCD, DNB (NIMS)</p>
+      <p class="speciality">Consultant Pulmonologist, Assistant Professor In CAIMS</p>
+      <a href="contact.html" class="btn-book"><i class="bi bi-calendar"></i> Book Appointment</a>
+    </div>
+
+
+  </div>
+
+</section>
+<div class="btn-center">
+  <a href="doctors.html" class="doctor-btn">Our Doctors</a>
+</div>
+
+
+
+
+
+
+
+
+    <section class="services-section">
+  <div class="services-overlay">
+
+    <p class="services-subtitle">OUR SERVICES</p>
+    <h2 class="services-title">Comprehensive Services For Every Need</h2>
+
+    <div class="services-grid">
+
+    <!-- 1 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/General-and-Laparoscopic-Surgery.jpg" alt="">
+      <div class="service-content">
+        <h3>GENERAL AND LAPAROSCOPIC SURGERY</h3>
+        <p>Wide range of surgical procedures using traditional invasive techniques.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/Obstetrics.jpg" alt="">
+      <div class="service-content">
+        <h3>OBSTETRICS AND GYNAECOLOGY INFERTILITY</h3>
+        <p>Complete women’s care from routine checkups to advanced fertility treatments.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/3-2.jpg" alt="">
+      <div class="service-content">
+        <h3>ORTHOPAEDICS AND TRAUMA</h3>
+        <p>Bone, joint, spine care and trauma management with precision,advanced orthopaedic solutions.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/4-1.jpg" alt="">
+      <div class="service-content">
+        <h3>UROLOGY</h3>
+        <p>Advanced care for urinary tract and male reproductive conditions.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/5-1.jpg" alt="">
+      <div class="service-content">
+        <h3>NEPHROLOGY</h3>
+        <p>Expert management of kidney diseases and dialysis care.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/6-1.jpg" alt="">
+      <div class="service-content">
+        <h3>PULMONOLOGY</h3>
+        <p>Respiratory care including asthma, COPD, and lung infections.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/7-1.jpg" alt="">
+      <div class="service-content">
+        <h3>24/7 EMERGENCY</h3>
+        <p>Immediate care for critical and life-threatening conditions.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/8.jpg" alt="">
+      <div class="service-content">
+        <h3>PAEDIATRIC SURGERY</h3>
+        <p>Specialized surgical care for infants, children, and adolescents.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/9.jpg" alt="">
+      <div class="service-content">
+        <h3>PAEDIATRICS</h3>
+        <p>Comprehensive child care from birth to adolescence.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/10.jpg" alt="">
+      <div class="service-content">
+        <h3>ANAESTHESIA & CRITICAL CARE</h3>
+        <p>Ensuring patient safety and comfort during surgeries.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/11.jpg" alt="">
+      <div class="service-content">
+        <h3>ENT</h3>
+        <p>Diagnosis and treatment for ear, nose, and throat disorders.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="service-card">
+      <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/12.jpg" alt="">
+      <div class="service-content">
+        <h3>GENERAL MEDICINE</h3>
+        <p>Primary care for a wide range of health conditions.</p>
+        <a href="services.html">Read More</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="why-choose-section">
+        <div class="why-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="why-left">
+                <h2 class="why-title">Why Choose Us</h2>
+                <div class="title-line"></div>
+
+                <div class="why-item">
+                    <div class="why-icon">➜</div>
+                    <div class="why-text">
+                        <h4>Experienced doctors’ team</h4>
+                        <p>
+                            Our skilled and qualified doctors bring years of experience
+                            to deliver expert, reliable medical care.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="why-item">
+                    <div class="why-icon">➜</div>
+                    <div class="why-text">
+                        <h4>Transparent and ethical practices</h4>
+                        <p>
+                            We follow honest, patient-first policies with complete clarity
+                            in every step of your care journey.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="why-item">
+                    <div class="why-icon">➜</div>
+                    <div class="why-text">
+                        <h4>High success rate</h4>
+                        <p>
+                            With advanced techniques and proven expertise, we consistently
+                            achieve excellent treatment outcomes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="why-item">
+                    <div class="why-icon">➜</div>
+                    <div class="why-text">
+                        <h4>Fixed and affordable pricing</h4>
+                        <p>
+                            We offer quality healthcare at predictable, fair prices —
+                            no hidden fees or unexpected costs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="why-right">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/Untitled-design-7.jpg"
+                    alt="Why Choose Us">
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+   
+    
+    
+    
+    
+    
+    <section class="facilities-section">
+        <div class="facilities-container">
+
+            <!-- SECTION HEADER -->
+            <div class="facilities-header">
+                <h2>Our Facilities</h2>
+                <p>
+                    Our hospital features modern infrastructure and advanced medical
+                    equipment to support every need.
+                </p>
+            </div>
+
+            <!-- GRID -->
+            <div class="facilities-grid">
+
+                <!-- LEFT COLUMN -->
+                <div class="facility-col left">
+
+                    <div class="facility-item">
+                        <div class="facility-text">
+                            <h4>24 X 7 Emergency</h4>
+                            <p>24x7 Emergency services for immediate, round-the-clock medical care.</p>
+                        </div>
+                        <span class="facility-icon">
+                            <i class="fas fa-ambulance"></i>
+                        </span>
+                    </div>
+
+                    <div class="facility-item">
+                        <div class="facility-text">
+                            <h4>Advanced Operation Theatre</h4>
+                            <p>Advanced Operation Theatres built for precision and safety.</p>
+                        </div>
+                        <span class="facility-icon">
+                            <i class="fas fa-hospital"></i>
+                        </span>
+                    </div>
+
+                    <div class="facility-item">
+                        <div class="facility-text">
+                            <h4>ICU</h4>
+                            <p>Modern ICU with life-saving equipment and expert critical care team.</p>
+                        </div>
+                        <span class="facility-icon">
+                            <i class="fas fa-procedures"></i>
+                        </span>
+                    </div>
+
+                    <div class="facility-item">
+                        <div class="facility-text">
+                            <h4>Laparoscopy</h4>
+                            <p>Minimally invasive laparoscopy for faster recovery.</p>
+                        </div>
+                        <span class="facility-icon">
+                            <i class="fas fa-microscope"></i>
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- CENTER COLUMN -->
+                <div class="facility-center-col">
+
+                    <!-- AC ROOMS -->
+                    <div class="facility-center-item">
+                        <span class="facility-icon">
+                            <i class="fas fa-hospital"></i>
+                        </span>
+                        <h4>AC Rooms</h4>
+                        <p>Comfortable AC rooms designed for restful and private recovery.</p>
+                    </div>
+
+                    <!-- IMAGE -->
+                    <div class="facility-center">
+                        <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/General-Surgery.jpg.jpg"
+                            alt="Hospital Facility">
+                    </div>
+
+                    <!-- BIRTH ROOMS -->
+                    <div class="facility-center-item">
+                        <span class="facility-icon">
+                            <i class="fas fa-building"></i>
+                        </span>
+                        <h4>Birth Rooms</h4>
+                        <p>Well-equipped birth rooms to ensure safe and supportive deliveries.</p>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="facility-col right">
+
+                    <div class="facility-item">
+                        <span class="facility-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </span>
+                        <div class="facility-text">
+                            <h4>Cardiotocogram (CTG)</h4>
+                            <p>Continuous CTG monitoring for fetal health.</p>
+                        </div>
+                    </div>
+
+                    <div class="facility-item">
+                        <span class="facility-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </span>
+                        <div class="facility-text">
+                            <h4>X Ray Machine</h4>
+                            <p>Digital X-ray machine delivering clear results.</p>
+                        </div>
+                    </div>
+
+                    <div class="facility-item">
+                        <span class="facility-icon">
+                            <i class="fas fa-heart-pulse"></i>
+                        </span>
+                        <div class="facility-text">
+                            <h4>ECG</h4>
+                            <p>On-site ECG services for quick heart assessments.</p>
+                        </div>
+                    </div>
+
+                    <div class="facility-item">
+                        <span class="facility-icon">
+                            <i class="fas fa-flask"></i>
+                        </span>
+                        <div class="facility-text">
+                            <h4>Advanced LAB</h4>
+                            <p>Advanced lab offering fast diagnostic results.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <section class="insurance-section">
+        <h2 class="insurance-title">Health Insurances</h2>
+
+        <div class="insurance-grid">
+
+            <!-- CARD 1 -->
+            <div class="insurance-card">
+                <img src="http://sudhahospitalsknr.com/wp-content/uploads/2025/04/b-1.png" alt="">
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="insurance-card">
+                <img src="http://sudhahospitalsknr.com/wp-content/uploads/2025/04/c-1.png" alt="">
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="insurance-card">
+                <img src="http://sudhahospitalsknr.com/wp-content/uploads/2025/04/a-1.png" alt="">
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="insurance-card">
+                <img src="http://sudhahospitalsknr.com/wp-content/uploads/2025/04/I4.png" alt="">
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="insurance-card">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/I1-1.png" alt="">
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="insurance-card">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/I2.png" alt="">
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="insurance-card">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/I3.png" alt="">
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="insurance-card">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/04/I6.png" alt="">
+            </div>
+
+            <!-- CARD 9 -->
+            <div class="insurance-card">
+                <img src="http://sudhahospitalsknr.com/wp-content/uploads/2025/04/I7.png" alt="">
+            </div>
+
+            <!-- CARD 10 -->
+            <div class="insurance-card">
+                <img src="http://sudhahospitalsknr.com/wp-content/uploads/2025/04/I8.png" alt="">
+            </div>
+
+            <!-- CARD 11 -->
+            <div class="insurance-card">
+                <img src="http://sudhahospitalsknr.com/wp-content/uploads/2025/04/I5.png" alt="">
+            </div>
+
+            <!-- CARD 12 -->
+            <div class="insurance-card">
+                <img src="http://sudhahospitalsknr.com/wp-content/uploads/2025/04/I12.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="gallery-section">
+        <h2 class="gallery-title">Gallery</h2>
+
+        <div class="gallery-wrapper">
+            <!-- LEFT ARROW -->
+            <button class="gallery-arrow left" onclick="scrollGallery(-1)">&#10094;</button>
+
+            <!-- IMAGES -->
+            <div class="gallery-track" id="galleryTrack">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/25.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/24.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/23.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/22.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/2.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/4.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/7.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/3.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/14.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/13.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/6.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/12.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/11.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/9.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/10.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/18.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/15.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/20.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/1.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/19.jpg" alt="">
+                <img src="https://sudhahospitalsknr.com/wp-content/uploads/2025/05/5.jpg" alt="">
+            </div>
+
+            <!-- RIGHT ARROW -->
+            <button class="gallery-arrow right" onclick="scrollGallery(1)">&#10095;</button>
+        </div>
+    </section>
+    <script>
+        function scrollGallery(direction) {
+            const track = document.getElementById("galleryTrack");
+            const scrollAmount = 300;
+            track.scrollLeft += direction * scrollAmount;
+        }
+    </script>
+
+
+
+
+
+
+
+    <section class="reviews-section">
+    <h2 class="reviews-title">Our Happy Clients</h2>
+
+        <div class="reviews-wrap">
+
+            <!-- LEFT GOOGLE SUMMARY -->
+            <div class="google-box">
+                <div class="google-head">
+                    <div class="google-icon">🏪</div>
+                    <div>
+                        <div class="google-title">Sudha Hospital ( Best Gynaecology Hospital in Karimnagar )</div>
+                        <div class="rating">4.6 ★★★★★</div>
+                        <div class="google-sub">Based on 52 reviews</div>
+                        <div class="google-sub">powered by <span style="color:#1a73e8;font-weight:600">Google</span>
+                        </div>
+                        <a 
+  href="https://www.google.com/search?q=sudha+hospital+(+best+gynaecology+hospital+in+karimnagar+)+(best+gynaecologist+in+karimnagar)general+surgeon+in+karimnagar%2C+d.no.3-5-2%2C+beside+hdfc+bank+atm%2C+doctor+st%2C+near+star+furniture+palace%2C+osmanpura%2C+karimnagar%2C+telangana+505001&oq=sud&gs_lcrp=EgZjaHJvbWUqBggAECMYJzIGCAAQIxgnMgoIARAuGLEDGIAEMgYIAhBFGDkyDAgDECMYJxiABBiKBTISCAQQLhhDGK8BGMcBGIAEGIoFMg0IBRAAGJECGIAEGIoFMg0IBhAAGIMBGLEDGIAEMg0IBxAuGIMBGLEDGIAEMgoICBAuGLEDGIAEMgcICRAAGI8C0gEJNDg2M2owajE1qAIMsAIB8QVu0Pb5Qsw6hPEFbtD2-ULMOoQ&sourceid=chrome&ie=UTF-8"
+  target="_blank"
+  rel="nofollow"
+  class="google-review-btn"
+>
+  review us on
+  <span class="google-g">G</span>
+</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SLIDER -->
+            <div class="slider-box">
+
+                <button class="arrow left" onclick="prev()">&#10094;</button>
+                <button class="arrow right" onclick="next()">&#10095;</button>
+
+                <div class="slider-track" id="track">
+
+                    <!-- REVIEW 1 -->
+                    <div class="review-card">
+                        <div class="review-head">
+                            <div class="user">
+                                <div class="avatar">r</div>
+                                <div>
+                                    <div class="name">ranjith kumar</div>
+                                    <div class="time">a year ago</div>
+                                </div>
+                            </div>
+                            <div class="google-logo">G</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="review-text">
+                            We have experienced positive vibes. Best Treatment and care.
+                        </div>
+                    </div>
+
+                    <!-- REVIEW 2 -->
+                    <div class="review-card">
+                        <div class="review-head">
+                            <div class="user">
+                                <div class="avatar">K</div>
+                                <div>
+                                    <div class="name">Khaja Zakiuddin</div>
+                                    <div class="time">a year ago</div>
+                                </div>
+                            </div>
+                            <div class="google-logo">G</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="review-text">
+                            A big thanks to Manasa madam for the care shown.
+                        </div>
+                    </div>
+
+
+                    <!-- REVIEW 2 -->
+                    <div class="review-card">
+                        <div class="review-head">
+                            <div class="user">
+                                <div class="avatar">M</div>
+                                <div>
+                                    <div class="name">Mave Lavanya</div>
+                                    <div class="time">a year ago</div>
+                                </div>
+                            </div>
+                            <div class="google-logo">G</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="review-text">
+                            Good Service,patience
+                        </div>
+                    </div>
+
+
+                    <!-- REVIEW 2 -->
+                    <div class="review-card">
+                        <div class="review-head">
+                            <div class="user">
+                                <div class="avatar">V</div>
+                                <div>
+                                    <div class="name">Vindya</div>
+                                    <div class="time">a year ago</div>
+                                </div>
+                            </div>
+                            <div class="google-logo">G</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="review-text">
+                            Best Hospotal in Karimnagar
+                        </div>
+                    </div>
+
+
+                    <!-- REVIEW 3 -->
+                    <div class="review-card">
+                        <div class="review-head">
+                            <div class="user">
+                                <div class="avatar">M</div>
+                                <div>
+                                    <div class="name">Mallesh Mallesh</div>
+                                    <div class="time">a year ago</div>
+                                </div>
+                            </div>
+                            <div class="google-logo">G</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="review-text">
+                            Tqq I'm happy 😊
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let index = 0;
+        const track = document.getElementById("track");
+        const dots = document.querySelectorAll(".dot");
+
+        function update() {
+            track.style.transform = `translateX(-${index * 325}px)`;
+            dots.forEach(d => d.classList.remove("active"));
+            dots[index].classList.add("active");
+        }
+
+        function next() {
+            index = (index + 1) % dots.length;
+            update();
+        }
+
+        function prev() {
+            index = (index - 1 + dots.length) % dots.length;
+            update();
+        }
+
+        setInterval(next, 4500);
+    </script>
+
+
+
+
+
+
+
+        <section class="appointment-section">
+            <div class="appointment-container">
+
+                <!-- LEFT CONTENT -->
+                <div class="appointment-left">
+                    <span class="small-title">APPOINTMENT</span>
+                    <h2>Get In Touch</h2>
+
+                    <div class="info-block">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>For Appointments and Inquirie</h4>
+                            <p>+91 7842 100 104</p>
+                            <p>+91 6301 317 338</p>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>
+                                Sudha Hospital, H.No.3-5-2, Civil Hospital Road, Near Forest Office
+                                Chowrasta, Karimnagar-505001.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>sudhahospitalknr@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <!-- MAP -->
+                    <div class="map-box">
+                        <iframe src="https://www.google.com/maps?q=Sudha+Hospital+Karimnagar&output=embed"
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- RIGHT FORM -->
+                <div class="appointment-form">
+                    <form>
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                        <input type="text" placeholder="Your Contact Number">
+                        <input type="text" placeholder="Services">
+                        <textarea placeholder="Your Message"></textarea>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+
+       
+       
+        <footer class="footer">
+
+        <!-- TOP FOOTER -->
+        <div class="footer-container">
+
+            <!-- COLUMN 1 -->
+            <div class="footer-col">
+                <h4>SUDHA HOSPITAL</h4>
+                <p>
+                    At Sudha Hospital, we are dedicated to bridging the gap
+                    between scientific innovation and career excellence.
+                </p>
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="footer-col">
+                <h4>GET IN TOUCH</h4>
+
+                <!-- CONTACT NUMBER BLOCK -->
+                <div class="contact-number-block">
+                    <i class="bi bi-telephone-fill"></i>
+
+                    <div class="number-text">
+                        <h5>Contact Number</h5>
+                        <p>+91 7842 100 104</p>
+                        <p>+91 6301 317 338</p>
+                    </div>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="footer-row">
+                    <i class="bi bi-envelope-fill"></i>
+                    <p>sudhahospitalknr@gmail.com</p>
+                </div>
+            </div>
+
+
+            <!-- COLUMN 3 -->
+            <div class="footer-col">
+                <h4>CONTACT INFO</h4>
+                <p>
+                    <strong>Address</strong><br>
+                    Sudha Hospital, H.No.3-5-2,<br>
+                    Civil Hospital Road, Near Forest Office Chowrasta,<br>
+                    Karimnagar-505001.
+                </p>
+            </div>
+
+            <!-- COLUMN 4 -->
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="about.html">
+                            <i class="bi bi-chevron-right"></i> About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            <i class="bi bi-chevron-right"></i> Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="doctors.html">
+                            <i class="bi bi-chevron-right"></i> Doctors
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="bi bi-chevron-right"></i> Contact Us
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="footer-divider"></div>
+
+        <!-- BOTTOM FOOTER -->
+        <div class="footer-bottom">
+            <p>© 2025 All Copyrights Reserved Sudha Hospital | Designed By Unified Films</p>
+
+            <div class="footer-social">
+                <span>FOLLOW US ON SOCIAL</span>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!-- FLOATING CONTACT ICONS -->
+<div class="floating-icons">
+
+  <!-- CALL -->
+  <a href="tel:+916301317338" class="float-btn call-btn" aria-label="Call">
+    <i class="bi bi-telephone-fill"></i>
+  </a>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/916301317338" target="_blank" class="float-btn whatsapp-btn" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
