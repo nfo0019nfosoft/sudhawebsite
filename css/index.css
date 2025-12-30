@@ -118,50 +118,29 @@
     font-size: 16px;
   }
 
-  /* HAMBURGER */
-
-
-  /* HAMBURGER ICON */
-.menu-toggle {
+  .menu-toggle {
   display: none;
   font-size: 28px;
   color: #ffffff;
   cursor: pointer;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
-
   .menu-toggle {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 12px;
-    z-index: 10000; /* keeps icon clickable */
+    position: static; /* IMPORTANT */
   }
+}
+}
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #142b6f;
+/* EXTRA SMALL */
+@media (max-width: 480px) {
+  .appointment-btn {
     width: 100%;
-    padding: 15px 0;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
     text-align: center;
-    padding: 10px 0;
   }
+}
 
-  .nav-links a {
-    font-size: 16px;
-  }
-}
-}
 
 
 
@@ -2418,15 +2397,16 @@ margin-top: 50px;
 
 
 
+
 /* FLOATING ICON WRAPPER */
 .floating-icons {
   position: fixed;
   right: 20px;
-  bottom: 40px;              /* Desktop position */
+  bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  z-index: 99999;            /* VERY IMPORTANT */
+  z-index: 9999;
 }
 
 /* COMMON BUTTON */
@@ -2442,7 +2422,6 @@ margin-top: 50px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   transition: transform 0.3s ease;
   text-decoration: none;
-  animation: pulse 1.8s infinite;
 }
 
 /* CALL BUTTON */
@@ -2455,34 +2434,29 @@ margin-top: 50px;
   background: #25D366;
 }
 
-/* HOVER */
+/* HOVER EFFECT */
 .float-btn:hover {
   transform: scale(1.1);
 }
 
-/* 📱 MOBILE FIX */
+/* MOBILE SIZE */
 @media (max-width: 600px) {
-  .floating-icons {
-    right: 16px;
-    bottom: 110px;          /* 👈 MOVE UP ON MOBILE */
-  }
-
   .float-btn {
     width: 56px;
     height: 56px;
     font-size: 24px;
   }
 }
-
-/* PULSE ANIMATION */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37,211,102,0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 18px rgba(37,211,102,0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37,211,102,0);
-  }
+.float-btn {
+  animation: pulse 1.8s infinite;
 }
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+  70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+
+
+

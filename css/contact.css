@@ -45,7 +45,11 @@
 /* ================= NAVBAR ================= */
 .navbar {
   background: #142b6f;
+  position: sticky;   /* 👈 ADD THIS */
+  top: 0;             /* 👈 ADD THIS */
+  z-index: 9999;      /* 👈 ADD THIS (important) */
 }
+
 
 .nav-container {
   max-width: 1200px;
