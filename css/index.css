@@ -45,7 +45,11 @@
 /* ================= NAVBAR ================= */
 .navbar {
   background: #142b6f;
+  position: sticky;   /* 👈 ADD THIS */
+  top: 0;             /* 👈 ADD THIS */
+  z-index: 9999;      /* 👈 ADD THIS (important) */
 }
+
 
 .nav-container {
   max-width: 1200px;
@@ -114,27 +118,34 @@
     font-size: 16px;
   }
 
-  .menu-toggle {
-  display: none;
+  /* HAMBURGER */
+.menu-toggle {
+ 
   font-size: 28px;
   color: #ffffff;
   cursor: pointer;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    position: static; /* IMPORTANT */
+    position: absolute;
+    right: 20px;
+    top: 12px;
   }
-}
-}
 
-/* EXTRA SMALL */
-@media (max-width: 480px) {
-  .appointment-btn {
-    width: 100%;
-    text-align: center;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #142b6f;
+    padding: 15px 0;
   }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
 }
 
 
