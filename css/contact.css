@@ -13,9 +13,9 @@
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -114,11 +114,22 @@
     font-size: 16px;
   }
 
-  .header-container {
-    flex-direction: column;
-    gap: 12px;
+  
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: static; /* IMPORTANT */
   }
 }
+
 
 /* EXTRA SMALL */
 @media (max-width: 480px) {
